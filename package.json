@@ -1,0 +1,35 @@
+{
+  "author": {
+    "name": "Vladimir Gorej",
+    "email": "vladimir.gorej@gmail.com",
+    "url": "https://www.linkedin.com/in/vladimirgorej/"
+  },
+  "name": "analicense",
+  "description": "Tool for analyzing npm packages and their licenses",
+  "keywords": "license analysis check",
+  "sideEffects": false,
+  "version": "0.1.0",
+  "homepage": "https://github.com/char0n/analicense",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/char0n/analicense.git"
+  },
+  "main": "./analicense.js",
+  "typings": "src/index.d.ts",
+  "engines": {
+    "node": ">=0.10.3"
+  },
+  "scripts": {
+    "clean": "rimraf analyzed"
+  },
+  "betterScripts": {
+  },
+  "readme": "README.md",
+  "devDependencies": {
+    "ramda": "=0.25.0",
+    "ramda-adjunct": "=2.5.0",
+    "rimraf": "=2.6.2",
+    "rxjs": "=5.5.6"
+  }
+}
