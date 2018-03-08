@@ -5,7 +5,7 @@ const { curry, curryN } = require('ramda');
 
 
 const fromStream$ = curryN(3, (stream, finishEventName = 'end', dataEventName = 'data') => {
-  //stream.pause();
+  stream.pause();
 
   return Rx.Observable.create((observer) => {
     const dataHandler = data => observer.next(data);
@@ -16,7 +16,7 @@ const fromStream$ = curryN(3, (stream, finishEventName = 'end', dataEventName = 
     stream.addListener('error', errorHandler);
     stream.addListener('end', endHandler);
 
-   // stream.resume();
+   stream.resume();
 
     return () => {
       stream.removeListener(dataEventName, dataHandler);
